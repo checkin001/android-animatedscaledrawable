@@ -1,5 +1,5 @@
 /*
-	Copyright 2013 © Demon Developers Ltd
+	Copyright 2013 ï¿½ Demon Developers Ltd
 	
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
@@ -55,7 +55,7 @@ public class AnimatedScaleDrawable extends Drawable implements Drawable.Callback
 {
 	public static final String  TAG = AnimatedScaleDrawable.class.getSimpleName();
 	
-	private AnimationScaleState mState;
+	protected AnimationScaleState mState;
 	private boolean             mMutated;
 	
 	private final Rect mTmpRect = new Rect();
@@ -437,7 +437,8 @@ public class AnimatedScaleDrawable extends Drawable implements Drawable.Callback
 		
 		int mChangingConfigurations;
 		
-		float   mMinScale  = 0.5f;
+		float   mMinScale  = 0.0f;
+		float   mMidScale  = 0.5f;
 		float   mMaxScale  = 1.0f;
 		float   mScale     = 0.0f;
 		int     mDuration  = 1000;
